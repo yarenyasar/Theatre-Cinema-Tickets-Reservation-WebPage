@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+        <div class="contact-container">
+            <form id="contactForm" action="" method="post">
+                <h1>Contact Us</h1>
+                <input type="text" id="firstName" placeholder="First-Name" style="color:white" required>
+                <input type="text" id="lastName" placeholder="Last-Name" style="color:white" required>
+                <input type="email" id="email" placeholder="Email" style="color:white" required>
+                <input type="text" id="mobile" placeholder="Mobile" style="color:white" required>
+                <textarea required id="typeMessage" placeholder="Type Your Message Here..."></textarea>
+                <input type="submit" value="SEND" id="Sbutton" style=" display: inline-block; outline: none; cursor: pointer; font-size: 14px; line-height: 1; border-radius: 500px; transition-property: background-color,border-color,color,box-shadow,filter; transition-duration: .3s; border: 1px solid transparent; letter-spacing: 2px; min-width: 160px; text-transform: uppercase; white-space: normal; font-weight: 700; text-align: center; padding: 16px 14px 18px; color: #fff; background-color: #808080; height: 48px;
+
+                " />
+            </form>
+        </div>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#Sbutton").click(function (e) {
+                e.preventDefault();
+
+                var firstName = $("#firstName").val();
+                var lastName = $("#lastName").val();
+                var FullName = firstName + " " + lastName;
+                var email = $("#email").val();
+                var mobile = $("#mobile").val();
+                var message = $("#typeMessage").val();
+
+                var formData = {
+                    NameSurname: FullName,
+                    Email: email,
+                    PhoneNumber: mobile,
+                    Message: message
+                };
+
+                console.log(formData);
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/AddContactToDatabase",
+                    data: formData,
+                    success: function (result) {
+                        if (result.success) {
+                            alert(result.message);
+                            window.location.href = "/Home/Index";
+                        }
+                        else {
+                            alert("Error Code: " + result.errors.join(", "));
+                        }
+                    },
+                    error: function (data) {
+                        alert("Error!");
+                    }
+                });
+            });
+        });
+    </script>
+
+}

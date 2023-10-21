@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <meta charset="utf-8">
+    <title>Kültür Cinema</title>
+    <link href="~/style.css" rel="stylesheet" />
+    <link href="~/lightslider.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" rel="javascript"></script>
+    <script src="~/lightslider.js"></script>
+
+    <link rel="shortcut icon" href="images/favicon.jpg">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">
+            <img src="~/images/logo.jpg" style="border-radius:10px" width="75px" height="45px" />
+        </a>
+        <ul class="menu">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Cinema", "Cinema", "Home")</li>
+            <li>@Html.ActionLink("Theatre", "Theatre", "Home")</li>
+            <li>@Html.ActionLink("ContactUs", "ContactUs", "Home")</li>
+
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>
+
+    <div>
+        <section id="main">
+            @RenderBody()
+
+        </section>
+    </div>
+    <footer style="text-align:center">
+        <p style="font-style:italic">&copy; @DateTime.Now.Year - Kültür Cinema</p>
+    </footer>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <section class="movies" id="movies">
+        <h2 class="heading-movies">Movies</h2>
+
+        <div class="movies-container">
+
+            <div class="box">
+                <div class="box-img">
+
+                    <a href="@Url.Action("booking","Home", new {id=1,MovieName="Openheimer",Price=65})"><img src="~/images/m-1.jpg" class="hover01" /></a>
+
+                </div>
+                <div class="movie-text">
+                    <h3>Oppenheimer</h3>
+                    <span>180 min | Action</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+
+                    <a href="@Url.Action("booking","Home",  new {id=2,MovieName="Meg 2",Price=85})"><img src="~/images/m-2.jpg" /></a>
+
+
+                </div>
+                <div class="movie-text">
+                    <h3>Meg 2</h3>
+                    <span>180 min | Action/Adventure</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+
+                    <a href="@Url.Action("booking","Home",  new {id=3,MovieName="Barbie",Price=55})"><img src="~/images/m-3.jpg" /></a>
+                    <img src="~/images/m-3.jpg" />
+
+                </div>
+                <div class="movie-text">
+                    <h3>Barbie</h3>
+                    <span>120 min | Comedy/Drama</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+
+                    <a href="@Url.Action("booking","Home",  new {id=4,MovieName="The Exorcism of God",Price=75})"><img src="~/images/m-4.jpg" /></a>
+
+
+                </div>
+                <div class="movie-text">
+                    <h3>The Exorcism of God</h3>
+                    <span>120 min | Horror/Drama</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <a href="@Url.Action("booking","Home",  new {id=5,MovieName="Thor Love and Thunder",Price=65})"><img src="~/images/m-5.jpg" /></a>
+
+
+                </div>
+                <div class="movie-text">
+                    <h3>Thor Love and Thunder</h3>
+                    <span>120 min | Action/Adventure</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <a href="@Url.Action("booking","Home",  new {id=6,MovieName="Jurrasic World Dominion",Price=85})"><img src="~/images/m-6.jpg" /></a>
+
+                </div>
+                <div class="movie-text">
+                    <h3>Jurassic World Dominion</h3>
+                    <span>160 min | Action/Sci-Fi</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+
+                    <a href="@Url.Action("booking","Home",  new {id=7,MovieName="Blade Runner",Price=55})"><img src="~/images/m-7.jpg" /></a>
+
+                </div>
+                <div class="movie-text">
+                    <h3>Blade Runner</h3>
+                    <span>180 min | Sci-Fi/Action</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+
+                    <a href="@Url.Action("booking","Home",  new {id=8,MovieName="Spiderman No Way Home ",Price=75})"><img src="~/images/m-8.jpg" /></a>
+
+                </div>
+                <div class="movie-text">
+                    <h3>Spider Man No Way Home</h3>
+                    <span>180 min | Sci-Fi/Action</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <a href="@Url.Action("booking","Home",  new {id=9,MovieName="Loki  ",Price=55})"><img src="~/images/m-9.jpg" /></a>
+
+
+                </div>
+                <div class="movie-text">
+                    <h3>Loki</h3>
+                    <span>180 min | Action</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-img">
+
+                    <a href="@Url.Action("booking","Home",  new {id=10,MovieName="Inception",Price=95})"><img src="~/images/m-10.jpg" /></a>
+
+                </div>
+                <div class="movie-text">
+                    <h3>Inception</h3>
+                    <span>150 min | Sci-Fi/Action</span>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</div>

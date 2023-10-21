@@ -1,0 +1,249 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WebApplication1.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebApplication1.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\StyleSheet1.css",
+      "PackagePath": "staticwebassets\\StyleSheet1.css"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\StyleSheet2.css",
+      "PackagePath": "staticwebassets\\StyleSheet2.css"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\bootstrap-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\bootstrap-theme.css.map",
+      "PackagePath": "staticwebassets\\bootstrap-theme.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\bootstrap-theme.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap-theme.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\bootstrap.css",
+      "PackagePath": "staticwebassets\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\footer.css",
+      "PackagePath": "staticwebassets\\footer.css"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\LOGO.png",
+      "PackagePath": "staticwebassets\\images\\LOGO.png"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\Screensho.png",
+      "PackagePath": "staticwebassets\\images\\Screensho.png"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\bg.jpg",
+      "PackagePath": "staticwebassets\\images\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\cinema.jpg",
+      "PackagePath": "staticwebassets\\images\\cinema.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\controls.png",
+      "PackagePath": "staticwebassets\\images\\controls.png"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\facebook.png",
+      "PackagePath": "staticwebassets\\images\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\favicon.jpg",
+      "PackagePath": "staticwebassets\\images\\favicon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\image.jpg",
+      "PackagePath": "staticwebassets\\images\\image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\image2.jpg",
+      "PackagePath": "staticwebassets\\images\\image2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\image3.jpg",
+      "PackagePath": "staticwebassets\\images\\image3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\image4.jpg",
+      "PackagePath": "staticwebassets\\images\\image4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\image5.jpg",
+      "PackagePath": "staticwebassets\\images\\image5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\insta.png",
+      "PackagePath": "staticwebassets\\images\\insta.png"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\lloyd-dirks-4SLz_RCk6kQ-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\lloyd-dirks-4SLz_RCk6kQ-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\logincinema.jpg",
+      "PackagePath": "staticwebassets\\images\\logincinema.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\logo.jpg",
+      "PackagePath": "staticwebassets\\images\\logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-1.jpg",
+      "PackagePath": "staticwebassets\\images\\m-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-10.jpg",
+      "PackagePath": "staticwebassets\\images\\m-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-11.jpg",
+      "PackagePath": "staticwebassets\\images\\m-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-2.jpg",
+      "PackagePath": "staticwebassets\\images\\m-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-3.jpg",
+      "PackagePath": "staticwebassets\\images\\m-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-4.jpg",
+      "PackagePath": "staticwebassets\\images\\m-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-5.jpg",
+      "PackagePath": "staticwebassets\\images\\m-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-6.jpg",
+      "PackagePath": "staticwebassets\\images\\m-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-7.jpg",
+      "PackagePath": "staticwebassets\\images\\m-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-8.jpg",
+      "PackagePath": "staticwebassets\\images\\m-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\m-9.jpg",
+      "PackagePath": "staticwebassets\\images\\m-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\screen-thumb.png",
+      "PackagePath": "staticwebassets\\images\\screen-thumb.png"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-1.jpg",
+      "PackagePath": "staticwebassets\\images\\t-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-10.jpg",
+      "PackagePath": "staticwebassets\\images\\t-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-11.jpg",
+      "PackagePath": "staticwebassets\\images\\t-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-2.jpg",
+      "PackagePath": "staticwebassets\\images\\t-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-3.jpg",
+      "PackagePath": "staticwebassets\\images\\t-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-4.jpg",
+      "PackagePath": "staticwebassets\\images\\t-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-5.jpg",
+      "PackagePath": "staticwebassets\\images\\t-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-6.jpg",
+      "PackagePath": "staticwebassets\\images\\t-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-7.jpg",
+      "PackagePath": "staticwebassets\\images\\t-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-8.jpg",
+      "PackagePath": "staticwebassets\\images\\t-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\t-9.jpg",
+      "PackagePath": "staticwebassets\\images\\t-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\twiter.png",
+      "PackagePath": "staticwebassets\\images\\twiter.png"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\images\\youtube.png",
+      "PackagePath": "staticwebassets\\images\\youtube.png"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\lightslider.css",
+      "PackagePath": "staticwebassets\\lightslider.css"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\lightslider.js",
+      "PackagePath": "staticwebassets\\lightslider.js"
+    },
+    {
+      "Id": "C:\\Users\\Yaren\\Desktop\\WebApplication1\\wwwroot\\style.css",
+      "PackagePath": "staticwebassets\\style.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.WebApplication1.props",
+      "PackagePath": "build\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApplication1.props",
+      "PackagePath": "buildMultiTargeting\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.WebApplication1.props",
+      "PackagePath": "buildTransitive\\WebApplication1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

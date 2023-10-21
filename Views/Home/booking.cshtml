@@ -1,0 +1,468 @@
+﻿@model WebApplication1.Models.MovieModel
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kültür Cinema</title>
+    <link href="~/StyleSheet1.css" rel="stylesheet" />
+    <link href="~/StyleSheet2.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="images/favicon.jpg">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e2d1b7;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: "Lato", sans-serif;
+            margin: 0;
+        }
+
+        .hour-container {
+            margin: 20px 0;
+        }
+
+            .hour-container select {
+                background-color: #fff;
+                border: 0;
+                border-radius: 5px;
+                font-size: 14px;
+                margin-left: 10px;
+                padding: 5px 15px 5px 15px;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+            }
+
+
+        .container {
+            perspective: 1000px;
+            margin-bottom: 30px;
+        }
+
+        .seat {
+            background-color: #444451;
+            height: 12px;
+            width: 15px;
+            margin: 3px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+            .seat.selected {
+                background-color: #6feaf6;
+            }
+
+            .seat.occupied {
+                background-color: #fff;
+            }
+
+            .seat:nth-of-type(2) {
+                margin-right: 18px;
+            }
+
+            .seat:nth-last-of-type(2) {
+                margin-left: 18px;
+            }
+
+            .seat:not(.occupied):hover {
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+
+        .showcase .seat:not(.occupied):hover {
+            cursor: default;
+            transform: scale(1);
+        }
+
+        .showcase {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #777;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .showcase li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 10px;
+            }
+
+                .showcase li small {
+                    margin-left: 2px;
+                }
+
+        .row {
+            display: flex;
+        }
+
+        .screen {
+            background-color: #fff;
+            height: 70px;
+            width: 100%;
+            margin: 15px 0;
+            transform: rotateX(-45deg);
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+        }
+
+        p.text {
+            margin: 5px 0;
+        }
+
+            p.text span {
+                color: #6feaf6;
+            }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: rgb(105, 88, 68);
+            padding: 20px;
+            border: 1px solid #888;
+            max-width: 400px;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+            /* Style for form fields */
+            .modal-content label, .modal-content input {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            /* Style for buttons */
+            .modal-content button {
+                display: inline-block;
+                margin-top: 10px;
+                padding: 10px 20px;
+                background-color: #4e483d;
+                color: rgb(255, 255, 255);
+                border: none;
+                cursor: pointer;
+                align-items: center;
+            }
+
+        /* Style for the success message */
+        .success-message {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+
+        #mov-name{
+            font-size:85px;
+            font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+        }
+
+        #moviePrice{
+            color:green;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="movie-container">
+        <label id="mov-name">@Model.MovieName</label>
+        <span id="moviePrice">  @Model.price$</span>
+        
+    </div>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="movie-screen">
+
+            <img src="~/images/screen-thumb.png" />
+        </div>
+
+        <div class="row-container">
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <h5 class='subtitle'>GOLD</h5>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+            </div>
+            <h5 class='subtitle'>DIAMOND</h5>
+
+            <div class="text-wrapper">
+                <p class="text">Selected Seats <span id='count'>0</span>
+                <p class="text">Total Price $<span id="total">0</span></p>
+            </div>
+        </div>
+
+    </div>
+
+
+  
+
+
+    <script>
+        const seats = document.querySelectorAll(".row .seat:not(.occupied)");
+        const seatContainer = document.querySelector(".row-container");
+        const count = document.getElementById("count");
+        const total = document.getElementById("total");
+        const movieSelect = document.getElementById("movie");
+        const moviePrice = document.getElementById("moviePrice");
+
+
+        if(moviePrice !== null){
+
+            var pricetext=moviePrice.textContent || moviePrice.innerText;
+            var ticketPrice=parseInt(pricetext,10);
+            
+        }
+        
+        
+
+        function updateSelectedCount() {
+            const selectedSeats = document.querySelectorAll(".container .selected");
+
+            seatsIndex = [...selectedSeats].map(function (seat) {
+                return [...seats].indexOf(seat);
+            });
+
+            let selectedSeatsCount = selectedSeats.length;
+            count.textContent = selectedSeatsCount;
+            total.textContent = selectedSeatsCount * ticketPrice;
+        }
+
+
+        // Adding selected class to only non-occupied seats on 'click'
+
+        seatContainer.addEventListener("click", function (e) {
+            if (
+                e.target.classList.contains("seat") &&
+                !e.target.classList.contains("occupied")
+            ) {
+                e.target.classList.toggle("selected");
+                updateSelectedCount();
+            }
+        });
+
+        // Initial count and total rendering
+        updateSelectedCount();
+    </script>
+
+    <td>
+        <nobr>
+            <a href="javascript:void(0);"onclick="history.go(-1);"><input type="submit" value="Back"></a>
+            <button class="btn btn-2 btn-sep icon-cart" id="openModalBtn">Pay</button>
+        </nobr>
+    </td>
+
+
+
+
+
+
+    <!-- Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <!-- Ödeme bölümü içeriği -->
+            <h2>Payment Section</h2>
+            <form id="payForm" action="" method="post">
+                <!-- Ödeme form alanları buraya eklenir -->
+                <label for="Name-Surname">Name-Surname:</label>
+                <input type="text" id="Name-Surname" name="Name-Surname" required>
+
+                <label for="cardNumber">Card Number:</label>
+                <input type="number" id="cardNumber" name="cardNumber" required>
+
+                <label for="expiry">Expiration Date:</label>
+                <input type="text" id="expiry" name="expiry" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="number" id="cvv" name="cvv" required>
+
+                <button type="submit" id="submitPayment">Submit Payment</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        var modal = document.getElementById("paymentModal");
+        var btn = document.getElementById("openModalBtn");
+        var submitButton = document.getElementById("submitPayment");
+        var successModal = document.getElementById("successModal");
+
+        btn.onclick = function () {
+            modal.style.display = "flex";
+        }
+
+        submitButton.onclick = function (event) {
+            event.preventDefault();
+            modal.style.display = "none";
+        }
+
+        window.addEventListener("load", function () {
+            modal.style.display = "none";
+        });
+
+        window.onclick = function (event) {
+            if (event.target == modal || event.target == successModal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Form submit olayını yakala
+            console.log("readyfunc");
+            $("#submitPayment").click(function (e) {
+                // Sayfanın yeniden yüklenmesini engelle
+                e.preventDefault();
+
+               
+
+                // Form verilerini topla
+                var formData = {
+                    NameSurname: $("#Name-Surname").val(),
+                    CardNumber: $("#cardNumber").val(),
+                    Expiry: $("#expiry").val(),
+                    CVV: $("#cvv").val(),
+                    MovieName: $("#mov-name").text(),
+                    TotalPrice: parseFloat($("#total").text())
+                };
+
+                // AJAX isteği gönder
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/AddBookingToDatabase", // AddToDatabase eyleminin URL'sini ayarlayın
+                    data: formData,
+                    success: function (result) {
+                        if(result.success) {
+                            alert(result.message);
+                            window.location.href = "/Home/Index";
+                        }
+                        else {
+                            alert("Payment failed. Error Code: " + result.errors.join(", "));
+                        }
+                        
+                    },
+                    error: function (error) {
+                        // Hata durumunda işlem yapın (örneğin, hata mesajını gösterin)
+                        alert("Payment failed. Error Code: " + error.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+
+
+</html>
+
